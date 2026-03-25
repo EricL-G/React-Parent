@@ -27,7 +27,7 @@ function App() {
       <Carousels
       pics={myPics}
       pics2={myPics2}
-      Pics3={myPics3}
+      pics3={myPics3}
       />
       </div>
 
