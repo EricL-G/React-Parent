@@ -24,18 +24,18 @@ function App() {
       />
 
       <div>
-      {/* <Carousels
+      <Carousels
       pics={myPics}
       pics2={myPics2}
       Pics3={myPics3}
-      /> */}
+      />
       </div>
 
       <p> Read from Below: </p>
 
       <List fact1="Diversifying investments across various asset classes is crucial for reducing risk, often summarized by the saying, Don't put all your eggs in one basket, emphasizing the importance of decision making"/>
       <List fact1="Albert Einstein famously referred to compound interest as the {eighth wonder of the world} , highlighting its power to grow investments exponentially over time. "/>
-      <List fact1="The U.S. national debt has grown from $43 billion in 1940 to over $36 trillion in 2026—an increase of more than 83,000% "/>
+      <List fact1="The U.S. national debt has grown from $43 billion in 1940 to over $36 trillion in 2026—an increase of more than 83,000% " />
 
       <Button 
       name="Next"
