@@ -1,12 +1,17 @@
-export function ProfileCard({ name, title, bio, imageUrl }) {
+import React from 'react';
+import './ProfileCard.css'; // Import the CSS file
+
+const ProfileCard = ({ name, title, bio, imageUrl }) => {
   return (
-    <div className="card">
-      <img src={imageUrl} alt={`Profile of ${name}`} style={{ width: '100%' }} />
-      <h2>{name}</h2>
-      <p className="card-title">{title}</p>
-      <p>{bio}</p>
-      <button>Contact</button>
+    <div className="profile-card">
+      <img src={imageUrl} alt={`Profile of ${name}`} className="profile-image" />
+      <div className="card-content">
+        <h1 className="profile-name">{name}</h1>
+        <h2 className="profile-title">{title}</h2>
+        <p className="profile-bio">{bio}</p>
+      </div>
     </div>
   );
-}
+};
+
 export default ProfileCard;

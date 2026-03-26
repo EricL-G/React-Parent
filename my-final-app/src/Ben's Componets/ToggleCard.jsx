@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
-import './ToggleCard.css';
+import './ToggleCard.css'; // Import the CSS styles
 
 const ToggleCard = ({ frontContent, backContent }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [flipped, setFlipped] = useState(false);
 
   const handleFlip = () => {
-    setIsFlipped(!isFlipped);
+    setFlipped(!flipped);
   };
 
   return (
-    <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleFlip}>
-      <div className="card-inner">
+    <div className={`flashcard-container ${flipped ? 'flipped' : ''}`} onClick={handleFlip}>
+      <div className="flashcard-inner">
         {/* Front Side */}
-        <div className="card-front">
+        <div className="flashcard-side flashcard-front">
           {frontContent}
         </div>
-        
         {/* Back Side */}
-        <div className="card-back">
+        <div className="flashcard-side flashcard-back">
           {backContent}
         </div>
       </div>
