@@ -8,6 +8,7 @@ import myPics2 from './assets/DebtCategories.png';
 import myPics3 from './assets/usdebt.png';
 import React from "react";
 import Carousels from "./components/Carousels";
+import Radio from "./components/Radio";
 import "flowbite"; // Import Flowbite JS for interactive components
 import "./index.css"; // Tailwind styles
 function App() {
@@ -30,11 +31,17 @@ function App() {
       <List fact1="Albert Einstein famously referred to compound interest as the {eighth wonder of the world} , highlighting its power to grow investments exponentially over time. "/>
       <List fact1="The U.S. national debt has grown from $43 billion in 1940 to over $36 trillion in 2026—an increase of more than 83,000% " />
 
+    <h2> Image Fun Facts </h2>
+
       <div>
       <Carousels
       pics={myPics}
-      pics2={myPics2}
-      pics3={myPics3}
+      />
+       <Carousels
+      pics={myPics2}
+      />
+       <Carousels
+      pics={myPics3}
       />
       </div>
 
@@ -43,6 +50,9 @@ function App() {
       name="Next"
       /> */}
 
+      <h1 className= "border-red-300"> What kind of buyer are YOU? </h1> 
+      
+      
     </>
   );
 }
