@@ -1,7 +1,11 @@
+import CanvasSwitcher from '../components/CanvasSwitcher'
+
 function Profile() {
  return (
  <>
-   <h1>Profile Page</h1>
+   <h3>by Cheok Kuan Leong</h3>
+   <CanvasSwitcher />
+
  </>
 )
 };

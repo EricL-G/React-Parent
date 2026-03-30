@@ -13,20 +13,23 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Profile from "./pages/Profile";
+import Bonus from "./pages/Bonus";
 import "flowbite"; // Import Flowbite JS for interactive components
 import "./index.css"; // Tailwind styles
 function App() {
   return (
     <BrowserRouter>
       <nav>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/about">About</Link> |{" "}
-        <Link to="/profile">Profile</Link>
+        <Link to="/">Bonus1</Link> |{" "}
+        <Link to="/about">Bonus2</Link> |{" "}
+        <Link to="/bonus">Bonus3</Link> |{" "}
+        <Link to="/profile">Bonus</Link>
       </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/bonus" element={<Bonus />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>

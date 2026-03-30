@@ -4,7 +4,8 @@ import List from '../components/List'
 function Home() {
  return (
  <>
-   <h1>Home Page</h1>
+   <h3>by Cheok Kuan Leong</h3>
+   
 
    <Header
         title="Fun Facts"
