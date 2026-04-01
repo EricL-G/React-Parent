@@ -1,16 +1,16 @@
-import Header from './components/Header';
-import List from './components/List';
-// import Imageslide from './components/Imageslide'
-import Button from './components/Button'
-import CanvasSwitcher from './components/CanvasSwitcher'
-import myPics from './assets/Albert3.png';
-import myPics2 from './assets/DebtCategories.png';
-import myPics3 from './assets/usdebt.png';
-import React from "react";
-import Carousels from "./components/Carousels";
-import Radio from "./components/Radio";
+// import Header from './components/Header';
+// import List from './components/List';
+// // import Imageslide from './components/Imageslide'
+// import Button from './components/Button'
+// import CanvasSwitcher from './components/CanvasSwitcher'
+// import myPics from './assets/Albert3.png';
+// import myPics2 from './assets/DebtCategories.png';
+// import myPics3 from './assets/usdebt.png';
+// import React from "react";
+// import Carousels from "./components/Carousels";
+// import Radio from "./components/Radio";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
+import First from "./pages/First";
 import About from "./pages/About";
 import Profile from "./pages/Profile";
 import Bonus from "./pages/Bonus";
@@ -27,7 +27,7 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<First />} />
         <Route path="/about" element={<About />} />
         <Route path="/bonus" element={<Bonus />} />
         <Route path="/profile" element={<Profile />} />
