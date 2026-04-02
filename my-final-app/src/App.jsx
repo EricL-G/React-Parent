@@ -1,18 +1,25 @@
-import React from 'react';
-import ProfileCard from './ProfileCard';
-//import profilePic from './profile-pic.jpg'; // Import your image asset
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Profile from "./Pages/Profile";
 
 function App() {
   return (
-    <div className="App">
-      <ProfileCard
-        name="Jane Doe"
-        title="Frontend Developer"
-        bio="I enjoy creating responsive and modern user interfaces."
-        imageUrl={profilePic}
-      />
-    </div>
+    <BrowserRouter>
+      <nav>
+        <Link to="/">Home</Link> |{" "}
+        <Link to="/about">About</Link> |{" "}
+        <Link to="/profile">Profile</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
