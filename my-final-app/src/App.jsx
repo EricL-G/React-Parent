@@ -11,9 +11,9 @@
 // import Radio from "./components/Radio";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import First from "./pages/First";
-import About from "./pages/About";
-import Profile from "./pages/Profile";
-import Bonus from "./pages/Bonus";
+import Second from "./pages/Second";
+import Final from "./pages/Final";
+import Third from "./pages/Third";
 import "flowbite"; // Import Flowbite JS for interactive components
 import "./index.css"; // Tailwind styles
 function App() {
@@ -21,16 +21,16 @@ function App() {
     <BrowserRouter>
       <nav>
         <Link to="/">Bonus1</Link> |{" "}
-        <Link to="/about">Bonus2</Link> |{" "}
-        <Link to="/bonus">Bonus3</Link> |{" "}
-        <Link to="/profile">Bonus</Link>
+        <Link to="/second">Bonus2</Link> |{" "}
+        <Link to="/third">Bonus3</Link> |{" "}
+        <Link to="/final">Bonus</Link>
       </nav>
 
       <Routes>
         <Route path="/" element={<First />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/bonus" element={<Bonus />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/second" element={<Second />} />
+        <Route path="/third" element={<Third />} />
+        <Route path="/final" element={<Final />} />
       </Routes>
     </BrowserRouter>
   );

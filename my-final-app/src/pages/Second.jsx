@@ -7,7 +7,7 @@ import myPics6 from '../assets/Budget.png'
 import React from "react";
 import Pictures from "../components/Pictures";
 
-function About() {
+function Second() {
  return (
  <>
    <h3>by Cheok Kuan Leong</h3>
@@ -43,4 +43,4 @@ function About() {
 };
 
 
-export default About;
+export default Second;

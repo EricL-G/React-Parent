@@ -1,6 +1,6 @@
 import Radio from "../components/Radio";
 
-function Bonus() {
+function Third() {
  return (
  <>
    <h3>by Cheok Kuan Leong</h3>
@@ -34,4 +34,4 @@ function Bonus() {
 )
 };
 
-export default Bonus;
+export default Third;

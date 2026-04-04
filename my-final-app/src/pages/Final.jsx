@@ -1,6 +1,6 @@
 import CanvasSwitcher from '../components/CanvasSwitcher'
 
-function Profile() {
+function Final() {
  return (
  <>
    <h3>by Cheok Kuan Leong</h3>
@@ -11,4 +11,4 @@ function Profile() {
 };
 
 
-export default Profile;
+export default Final;
