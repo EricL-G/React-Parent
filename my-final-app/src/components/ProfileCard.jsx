@@ -1,5 +1,3 @@
-import React from 'react';
-import './ProfileCard.css'; // Import the CSS file
 
 const ProfileCard = ({ name, title, bio, imageUrl }) => {
   return (

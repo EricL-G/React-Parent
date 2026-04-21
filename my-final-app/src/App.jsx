@@ -17,6 +17,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
+      <div style={{ marginTop: '1rem', textAlign: 'center' }}>
+      </div>
     </BrowserRouter>
   );
 }
