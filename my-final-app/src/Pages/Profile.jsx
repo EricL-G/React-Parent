@@ -29,20 +29,6 @@ function Profile() {
         </div>
 
         <div style={{ marginBottom: '1rem' }}>
-          <label htmlFor="title" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>
-            Title:
-          </label>
-          <input
-            id="title"
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder="Enter your title"
-            style={{ width: '100%', padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc' }}
-          />
-        </div>
-
-        <div style={{ marginBottom: '1rem' }}>
           <label htmlFor="bio" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>
             Bio:
           </label>
