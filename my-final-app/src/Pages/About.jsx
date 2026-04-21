@@ -21,7 +21,7 @@ function About() {
          name="Wilson"
          title="Developer"
          bio="Assist with the development of the project."
-         imageUrl="https://pbs.twimg.com/media/C2Sc_XvXUAABxDS.png"
+         imageUrl="../../images.jpg"
        />
        <ProfileCard
          name="Eric"
