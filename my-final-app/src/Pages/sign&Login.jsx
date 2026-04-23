@@ -1,7 +1,9 @@
 import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 
 export default function SignAndLogin() {
+  const navigate = useNavigate();
   const { setUserData } = useContext(UserContext);
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
@@ -73,6 +75,7 @@ export default function SignAndLogin() {
         setFormData({ name: '', password: '', confirmPassword: '' });
         setSubmitted(false);
         setSuccessMessage('');
+        navigate('/profile');
       }, 2000);
     }
   };
@@ -85,16 +88,16 @@ export default function SignAndLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#5e4e46' }}>
       <div className="w-full max-w-md">
         {/* Card */}
         <div className="bg-white rounded-lg shadow-2xl p-8 md:p-10">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2" style={{ fontFamily: "'Nanum Gothic', sans-serif", fontWeight: 'bold', color: '#e9bd7e' }}>
               {isLogin ? '🔐 Login' : '✨ Sign Up'}
             </h1>
-            <p className="text-gray-600">
+            <p className="text-sm" style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif" }}>
               {isLogin
                 ? 'Welcome back! Please login to your account'
                 : 'Create a new account to get started'}
@@ -104,7 +107,7 @@ export default function SignAndLogin() {
           {/* Success Message */}
           {successMessage && (
             <div className="bg-green-50 border-l-4 border-green-500 p-4 mb-6 rounded animate-pulse">
-              <p className="text-green-700 font-semibold">{successMessage}</p>
+              <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif", fontWeight: 'bold' }}>{successMessage}</p>
             </div>
           )}
 
@@ -128,7 +131,7 @@ export default function SignAndLogin() {
                   }`}
                 />
                 {errors.name && (
-                  <p className="text-red-500 text-sm mt-1">❌ {errors.name}</p>
+                  <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif", fontSize: '0.875rem', marginTop: '0.25rem' }}>❌ {errors.name}</p>
                 )}
               </div>
             )}
@@ -150,7 +153,7 @@ export default function SignAndLogin() {
                 }`}
               />
               {errors.password && (
-                <p className="text-red-500 text-sm mt-1">❌ {errors.password}</p>
+                <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif", fontSize: '0.875rem', marginTop: '0.25rem' }}>❌ {errors.password}</p>
               )}
             </div>
 
@@ -172,7 +175,7 @@ export default function SignAndLogin() {
                   }`}
                 />
                 {errors.confirmPassword && (
-                  <p className="text-red-500 text-sm mt-1">❌ {errors.confirmPassword}</p>
+                  <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif", fontSize: '0.875rem', marginTop: '0.25rem' }}>❌ {errors.confirmPassword}</p>
                 )}
               </div>
             )}
@@ -195,7 +198,7 @@ export default function SignAndLogin() {
 
           {/* Toggle Button */}
           <div className="text-center">
-            <p className="text-gray-600 text-sm mb-3">
+            <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif", fontSize: '0.875rem', marginBottom: '0.75rem' }}>
               {isLogin ? "Don't have an account?" : 'Already have an account?'}
             </p>
             <button
@@ -209,7 +212,7 @@ export default function SignAndLogin() {
 
           {/* Footer Info */}
           <div className="mt-6 text-center text-xs text-gray-500">
-            <p>🔒 Your data is secure and encrypted</p>
+            <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif" }}>🔒 Your data is secure and encrypted</p>
           </div>
         </div>
       </div>

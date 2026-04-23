@@ -27,12 +27,12 @@ function Profile() {
   };
 
   return (
-    <>
-      <h1>Profile Page</h1>
+    <div style={{ backgroundColor: '#5e4e46', minHeight: '100vh', padding: '2rem' }}>
+      <h1 style={{ fontFamily: "'Nanum Gothic', sans-serif", fontWeight: 'bold', color: '#e9bd7e' }}>Profile Page</h1>
       
       {!isLoggedIn ? (
-        <div style={{ padding: '2rem', backgroundColor: '#fff3cd', borderRadius: '8px', marginBottom: '2rem', border: '1px solid #ffc107' }}>
-          <p style={{ fontSize: '1.1rem', color: '#856404', marginBottom: '1rem' }}>
+        <div style={{ padding: '2rem', backgroundColor: '#fff3cd', borderRadius: '8px', marginBottom: '2rem', border: '1px solid #ffc107', marginTop: '1rem' }}>
+          <p style={{ fontSize: '1.1rem', color: '#e9d8c7', marginBottom: '1rem', fontFamily: "'Noto Sans KR', sans-serif" }}>
             ℹ️ Please sign up or log in first to view your profile.
           </p>
           <a href="/auth" style={{ color: '#0066cc', textDecoration: 'none', fontWeight: 'bold' }}>
@@ -42,9 +42,9 @@ function Profile() {
       ) : (
         <>
           <div style={{ padding: '1rem', backgroundColor: '#d4edda', borderRadius: '8px', marginBottom: '2rem', border: '1px solid #28a745' }}>
-            <p style={{ fontSize: '1rem', color: '#155724', margin: '0 0 0.5rem 0' }}>
+            <h2 style={{ fontSize: '1rem', color: '#155724', margin: '0 0 0.5rem 0', fontFamily: "'Nanum Gothic', sans-serif", fontWeight: 'bold' }}>
               ✅ Welcome back, <strong>{name}</strong>!
-            </p>
+            </h2>
             <button
               onClick={handleLogout}
               style={{
@@ -66,13 +66,35 @@ function Profile() {
         </>
       )}
       
-      <ProfileCard 
-        name={name}
-        title={title}
-        bio={bio}
-        imageUrl={imageUrl}
-      />
-    </>
+      {isLoggedIn && (
+        <div style={{ marginBottom: '2rem', padding: '1.5rem', backgroundColor: '#f0f7ff', borderRadius: '8px', border: '1px solid #0066cc' }}>
+          <h2 style={{ marginTop: '0', marginBottom: '1rem', color: '#e9bd7e', fontFamily: "'Nanum Gothic', sans-serif", fontWeight: 'bold' }}>✏️ Edit Your Bio</h2>
+          <textarea
+            value={bio}
+            onChange={(e) => setBio(e.target.value)}
+            placeholder="Enter your bio"
+            rows="4"
+            style={{ 
+              width: '100%', 
+              padding: '0.75rem', 
+              borderRadius: '4px', 
+              border: '1px solid #0066cc',
+              fontFamily: 'inherit',
+              fontSize: '1rem'
+            }}
+          />
+        </div>
+      )}
+      
+      {isLoggedIn && (
+        <ProfileCard 
+          name={name}
+          title={title}
+          bio={bio}
+          imageUrl={imageUrl}
+        />
+      )}
+    </div>
   );
 }
 

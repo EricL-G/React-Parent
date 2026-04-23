@@ -2,9 +2,9 @@ import ProfileCard from '../components/ProfileCard';
 
 function About() {
  return (
-   <>
-     <h1>About Page / Credits</h1>
-     <p>This is our basic game about personal finance</p>
+   <div style={{ backgroundColor: '#5e4e46', minHeight: '100vh', padding: '2rem' }}>
+     <h1 style={{ fontFamily: "'Nanum Gothic', sans-serif", fontWeight: 'bold', color: '#e9bd7e' }}>About Page / Credits</h1>
+     <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif" }}>This is our basic game about personal finance</p>
      <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', marginTop: '1rem' }}>
        <ProfileCard
          name="Ben"
@@ -31,7 +31,7 @@ function About() {
          imageUrl="https://media1.tenor.com/m/fujdwWkRe6MAAAAC/fatty-kirby.gif"
        />
      </div>
-   </>
+   </div>
  )
 }
 

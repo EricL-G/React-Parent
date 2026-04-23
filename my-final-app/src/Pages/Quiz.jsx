@@ -148,14 +148,14 @@ export default function Quiz() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#5e4e46' }}>
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-2" style={{ fontFamily: "'Nanum Gothic', sans-serif", fontWeight: 'bold', color: '#e9bd7e' }}>
             💰 Finance Quiz
           </h1>
-          <p className="text-gray-600 text-lg">Test your financial knowledge</p>
+          <p className="text-lg" style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif" }}>Test your financial knowledge</p>
         </div>
 
         {/* Main Card */}
@@ -171,26 +171,26 @@ export default function Quiz() {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: "'Nanum Gothic', sans-serif", fontWeight: 'bold', color: '#e9bd7e' }}>
                 Quiz Complete!
               </h2>
 
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8 rounded">
-                <p className="text-lg text-gray-700 font-semibold">
+                <p className="text-lg font-semibold" style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif" }}>
                   {getScoreMessage()}
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4 mb-8 text-center">
                 <div className="bg-green-50 p-4 rounded-lg">
-                  <p className="text-2xl font-bold text-green-600">{score}</p>
-                  <p className="text-gray-600">Correct</p>
+                  <p style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#22c55e', fontFamily: "'Noto Sans KR', sans-serif" }}>{score}</p>
+                  <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif" }}>Correct</p>
                 </div>
                 <div className="bg-red-50 p-4 rounded-lg">
-                  <p className="text-2xl font-bold text-red-600">
+                  <p style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#dc2626', fontFamily: "'Noto Sans KR', sans-serif" }}>
                     {questions.length - score}
                   </p>
-                  <p className="text-gray-600">Incorrect</p>
+                  <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif" }}>Incorrect</p>
                 </div>
               </div>
 
@@ -226,7 +226,7 @@ export default function Quiz() {
 
               {/* Question */}
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6">
+                <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "'Nanum Gothic', sans-serif", fontWeight: 'bold', color: '#e9bd7e' }}>
                   {questions[currentQuestion].question}
                 </h2>
 
@@ -281,7 +281,7 @@ export default function Quiz() {
 
         {/* Footer */}
         <div className="text-center mt-8 text-gray-600 text-sm">
-          <p>📚 Improve your financial literacy today!</p>
+          <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif" }}>📚 Improve your financial literacy today!</p>
         </div>
       </div>
     </div>
