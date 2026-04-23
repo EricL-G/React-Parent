@@ -4,6 +4,7 @@ function About() {
  return (
    <>
      <h1>About Page / Credits</h1>
+     <p>This is our basic game about personal finance</p>
      <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', marginTop: '1rem' }}>
        <ProfileCard
          name="Ben"
