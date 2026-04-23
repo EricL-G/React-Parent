@@ -3,7 +3,7 @@ import ProfileCard from '../components/ProfileCard';
 function About() {
  return (
    <>
-     <h1>About Page</h1>
+     <h1>About Page / Credits</h1>
      <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', marginTop: '1rem' }}>
        <ProfileCard
          name="Ben"
