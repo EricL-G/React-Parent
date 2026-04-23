@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 
 export default function SignAndLogin() {
+  const { setUserData } = useContext(UserContext);
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     name: '',
@@ -54,6 +56,13 @@ export default function SignAndLogin() {
     setSubmitted(true);
 
     if (validateForm()) {
+      // Save user data to context
+      const userData = {
+        name: formData.name || 'User',
+        password: formData.password
+      };
+      setUserData(userData);
+
       if (isLogin) {
         setSuccessMessage('Successfully logged in! 🎉');
       } else {
