@@ -91,7 +91,7 @@ export default function SignAndLogin() {
     <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#5e4e46' }}>
       <div className="w-full max-w-md">
         {/* Card */}
-        <div className="bg-white rounded-lg shadow-2xl p-8 md:p-10">
+        <div className="rounded-lg shadow-2xl p-8 md:p-10" style={{ backgroundColor: '#3a6154', border: '2px solid #e9d8c7' }}>
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold mb-2" style={{ fontFamily: "'Nanum Gothic', sans-serif", fontWeight: 'bold', color: '#e9bd7e' }}>
@@ -116,7 +116,7 @@ export default function SignAndLogin() {
             {/* Name Field (Sign Up Only) */}
             {!isLogin && (
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-semibold mb-2" style={{ color: '#e9d8c7' }}>
                   Full Name
                 </label>
                 <input
@@ -138,7 +138,7 @@ export default function SignAndLogin() {
 
             {/* Password Field */}
             <div>
-              <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="password" className="block text-sm font-semibold mb-2" style={{ color: '#e9d8c7' }}>
                 Password
               </label>
               <input
@@ -160,7 +160,7 @@ export default function SignAndLogin() {
             {/* Confirm Password Field (Sign Up Only) */}
             {!isLogin && (
               <div>
-                <label htmlFor="confirmPassword" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="confirmPassword" className="block text-sm font-semibold mb-2" style={{ color: '#e9d8c7' }}>
                   Confirm Password
                 </label>
                 <input
@@ -192,7 +192,7 @@ export default function SignAndLogin() {
           {/* Divider */}
           <div className="my-6 flex items-center">
             <div className="flex-1 border-t border-gray-300"></div>
-            <div className="px-3 text-gray-500 text-sm">Or</div>
+            <div className="px-3 text-sm" style={{ color: '#e9d8c7' }}>Or</div>
             <div className="flex-1 border-t border-gray-300"></div>
           </div>
 
@@ -204,14 +204,15 @@ export default function SignAndLogin() {
             <button
               type="button"
               onClick={toggleMode}
-              className="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-50 font-bold py-2 px-4 rounded-lg transition duration-200"
+              className="w-full border-2 font-bold py-2 px-4 rounded-lg transition duration-200"
+              style={{ borderColor: '#e9bd7e', color: '#e9bd7e', backgroundColor: 'transparent', hover: { backgroundColor: '#5e5147' } }}
             >
               {isLogin ? 'Create Account' : 'Login Instead'}
             </button>
           </div>
 
           {/* Footer Info */}
-          <div className="mt-6 text-center text-xs text-gray-500">
+          <div className="mt-6 text-center text-xs" style={{ color: '#e9d8c7' }}>
             <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif" }}>🔒 Your data is secure and encrypted</p>
           </div>
         </div>
