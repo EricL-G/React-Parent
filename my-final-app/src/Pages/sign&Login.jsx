@@ -126,9 +126,19 @@ export default function SignAndLogin() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Enter your full name"
-                  className={`w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition ${
-                    errors.name ? 'border-red-500' : 'border-gray-300'
-                  }`}
+                  style={{
+                    width: '100%',
+                    padding: '0.5rem',
+                    borderRadius: '0.5rem',
+                    border: '2px solid #e9d8c7',
+                    backgroundColor: '#4a7d63',
+                    color: '#e9d8c7',
+                    fontFamily: "'Noto Sans KR', sans-serif",
+                    outline: 'none',
+                    transition: 'border-color 0.2s'
+                  }}
+                  onFocus={(e) => e.target.style.borderColor = '#e9bd7e'}
+                  onBlur={(e) => e.target.style.borderColor = errors.name ? '#dc3545' : '#e9d8c7'}
                 />
                 {errors.name && (
                   <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif", fontSize: '0.875rem', marginTop: '0.25rem' }}>❌ {errors.name}</p>
@@ -148,9 +158,19 @@ export default function SignAndLogin() {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="••••••••"
-                className={`w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition ${
-                  errors.password ? 'border-red-500' : 'border-gray-300'
-                }`}
+                style={{
+                  width: '100%',
+                  padding: '0.5rem',
+                  borderRadius: '0.5rem',
+                  border: '2px solid #e9d8c7',
+                  backgroundColor: '#4a7d63',
+                  color: '#e9d8c7',
+                  fontFamily: "'Noto Sans KR', sans-serif",
+                  outline: 'none',
+                  transition: 'border-color 0.2s'
+                }}
+                onFocus={(e) => e.target.style.borderColor = '#e9bd7e'}
+                onBlur={(e) => e.target.style.borderColor = errors.password ? '#dc3545' : '#e9d8c7'}
               />
               {errors.password && (
                 <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif", fontSize: '0.875rem', marginTop: '0.25rem' }}>❌ {errors.password}</p>
@@ -170,9 +190,19 @@ export default function SignAndLogin() {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   placeholder="••••••••"
-                  className={`w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition ${
-                    errors.confirmPassword ? 'border-red-500' : 'border-gray-300'
-                  }`}
+                  style={{
+                    width: '100%',
+                    padding: '0.5rem',
+                    borderRadius: '0.5rem',
+                    border: '2px solid #e9d8c7',
+                    backgroundColor: '#4a7d63',
+                    color: '#e9d8c7',
+                    fontFamily: "'Noto Sans KR', sans-serif",
+                    outline: 'none',
+                    transition: 'border-color 0.2s'
+                  }}
+                  onFocus={(e) => e.target.style.borderColor = '#e9bd7e'}
+                  onBlur={(e) => e.target.style.borderColor = errors.confirmPassword ? '#dc3545' : '#e9d8c7'}
                 />
                 {errors.confirmPassword && (
                   <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif", fontSize: '0.875rem', marginTop: '0.25rem' }}>❌ {errors.confirmPassword}</p>

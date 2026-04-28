@@ -159,13 +159,13 @@ export default function Quiz() {
         </div>
 
         {/* Main Card */}
-        <div className="bg-white rounded-lg shadow-xl p-8 md:p-12">
+        <div className="rounded-lg shadow-xl p-8 md:p-12" style={{ backgroundColor: '#3a6154', border: '2px solid #e9d8c7' }}>
           {showScore ? (
             // Results Screen
             <div className="text-center">
               <div className="mb-8">
-                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-indigo-100 mb-4">
-                  <span className="text-5xl font-bold text-indigo-600">
+                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full mb-4" style={{ backgroundColor: '#4a7d63', border: '3px solid #e9bd7e' }}>
+                  <span className="text-5xl font-bold" style={{ color: '#e9bd7e' }}>
                     {score}/{questions.length}
                   </span>
                 </div>
@@ -175,19 +175,19 @@ export default function Quiz() {
                 Quiz Complete!
               </h2>
 
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8 rounded">
+              <div className="border-l-4 p-4 mb-8 rounded" style={{ backgroundColor: '#4a7d63', borderColor: '#e9bd7e' }}>
                 <p className="text-lg font-semibold" style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif" }}>
                   {getScoreMessage()}
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4 mb-8 text-center">
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <p style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#22c55e', fontFamily: "'Noto Sans KR', sans-serif" }}>{score}</p>
+                <div className="p-4 rounded-lg" style={{ backgroundColor: '#4a7d63', border: '1px solid #e9d8c7' }}>
+                  <p style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#e9bd7e', fontFamily: "'Noto Sans KR', sans-serif" }}>{score}</p>
                   <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif" }}>Correct</p>
                 </div>
-                <div className="bg-red-50 p-4 rounded-lg">
-                  <p style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#dc2626', fontFamily: "'Noto Sans KR', sans-serif" }}>
+                <div className="p-4 rounded-lg" style={{ backgroundColor: '#4a7d63', border: '1px solid #e9d8c7' }}>
+                  <p style={{ fontSize: '2.25rem', fontWeight: 'bold', color: '#e9bd7e', fontFamily: "'Noto Sans KR', sans-serif" }}>
                     {questions.length - score}
                   </p>
                   <p style={{ color: '#e9d8c7', fontFamily: "'Noto Sans KR', sans-serif" }}>Incorrect</p>
@@ -196,7 +196,8 @@ export default function Quiz() {
 
               <button
                 onClick={handleRestart}
-                className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200 transform hover:scale-105"
+                className="w-full text-white font-bold py-3 px-4 rounded-lg transition duration-200 transform hover:scale-105"
+                style={{ backgroundColor: '#e9bd7e', color: '#3a6154' }}
               >
                 Retake Quiz
               </button>
@@ -207,18 +208,19 @@ export default function Quiz() {
               {/* Progress Bar */}
               <div className="mb-8">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm font-semibold text-gray-600">
+                  <span className="text-sm font-semibold" style={{ color: '#e9d8c7' }}>
                     Question {currentQuestion + 1}/{questions.length}
                   </span>
-                  <span className="text-sm font-semibold text-indigo-600">
+                  <span className="text-sm font-semibold" style={{ color: '#e9bd7e' }}>
                     Score: {score}
                   </span>
                 </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
+                <div className="w-full rounded-full h-2" style={{ backgroundColor: '#4a7d63' }}>
                   <div
-                    className="bg-indigo-600 h-2 rounded-full transition-all duration-300"
+                    className="h-2 rounded-full transition-all duration-300"
                     style={{
-                      width: `${((currentQuestion + 1) / questions.length) * 100}%`
+                      width: `${((currentQuestion + 1) / questions.length) * 100}%`,
+                      backgroundColor: '#e9bd7e'
                     }}
                   ></div>
                 </div>
@@ -240,12 +242,29 @@ export default function Quiz() {
                       className={`w-full p-4 text-left rounded-lg border-2 font-medium transition duration-200 ${
                         selectedAnswer === index
                           ? index === questions[currentQuestion].correct
-                            ? 'border-green-500 bg-green-50 text-green-700'
-                            : 'border-red-500 bg-red-50 text-red-700'
+                            ? ''
+                            : ''
                           : answered && index === questions[currentQuestion].correct
-                          ? 'border-green-500 bg-green-50 text-green-700'
-                          : 'border-gray-300 bg-gray-50 text-gray-700 hover:border-indigo-500 hover:bg-indigo-50'
+                          ? ''
+                          : ''
                       } ${answered ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                      style={{
+                        borderColor: selectedAnswer === index
+                          ? index === questions[currentQuestion].correct
+                            ? '#22c55e'
+                            : '#dc2626'
+                          : answered && index === questions[currentQuestion].correct
+                          ? '#22c55e'
+                          : '#e9d8c7',
+                        backgroundColor: selectedAnswer === index
+                          ? index === questions[currentQuestion].correct
+                            ? '#4a7d63'
+                            : '#5e4e46'
+                          : answered && index === questions[currentQuestion].correct
+                          ? '#4a7d63'
+                          : '#4a7d63',
+                        color: '#e9d8c7'
+                      }}
                     >
                       <div className="flex items-center">
                         <span className="mr-3 text-lg">
@@ -270,7 +289,8 @@ export default function Quiz() {
               {answered && (
                 <button
                   onClick={handleNext}
-                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200 transform hover:scale-105"
+                  className="w-full font-bold py-3 px-4 rounded-lg transition duration-200 transform hover:scale-105"
+                  style={{ backgroundColor: '#e9bd7e', color: '#3a6154' }}
                 >
                   {currentQuestion === questions.length - 1 ? 'Finish Quiz' : 'Next Question'}
                 </button>
